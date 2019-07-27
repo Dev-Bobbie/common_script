@@ -45,10 +45,10 @@ async def main(loop):
     for s in k:
         asyncio.ensure_future(consumer(s,pool))
 
-if __name__=="__main__":
+    
 
-    start_time = time.time()
+if __name__=="__main__":
     loop = asyncio.get_event_loop()
     asyncio.ensure_future(main(loop))
     loop.run_forever()
-    print("last time:{}".format(time.time()-start_time))
+
